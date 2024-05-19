@@ -1,9 +1,8 @@
-
 import { Banner } from "@/components/Banner";
 import ProductList from "@/components/ProductList";
 import { products } from "../data/products";
 import { NextPage } from "next";
-import { Footer } from "@/components/Footer";
+
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +10,6 @@ const Home: NextPage = () => {
       <div>
         <Banner />
         <ProductList products={products} />
-        <Footer />
       </div>
     </>
   );

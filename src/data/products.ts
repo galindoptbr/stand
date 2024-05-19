@@ -1,6 +1,6 @@
 import { Product } from "@/types/types";
 
-import Img1 from "@/assets/images/wheels-1.jpg";
+import Img1 from "@/assets/images/wheels-1.png";
 
 export const products: Product[] = [
   {
@@ -13,9 +13,9 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    name: "produto 2",
+    name: "100/82",
     price: 29.99,
-    description: "descricao do produto 2",
+    description: "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
     image: Img1,
     brand: "bmw",
   },
