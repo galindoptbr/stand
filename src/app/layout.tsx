@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Olavo Wheels",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className="text-zinc-100 bg-black">{children}</body>
+      <body className="text-zinc-100 bg-black">
+        <Navbar />
+        {children}
+        </body>
     </html>
   );
 }
