@@ -1,8 +1,7 @@
-import { Banner } from "@/components/Banner";
 import ProductList from "@/components/ProductList";
 import { products } from "../data/products";
 import { NextPage } from "next";
-
+import { Banner } from "@/components/Banner";
 
 const Home: NextPage = () => {
   return (

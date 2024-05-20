@@ -9,7 +9,7 @@ import paymentsMethods from "@/assets/images/payments.png";
 export const Footer = () => {
   return (
     <>
-      <div className="w-full bg-zinc-900 mt-8 p-6 h-96">
+      <div className="w-full bg-zinc-900 mt-24 p-6 h-96">
         <div className="flex justify-between max-w-[1200px] m-auto gap-6">
           <div className="flex flex-col gap-4 w-64   ">
             <span className="font-bold">Sobre Nos</span>

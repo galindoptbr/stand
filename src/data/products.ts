@@ -9,15 +9,16 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 1",
     image: Img1,
-    brand: "bmw",
+    brand: "BMW",
   },
   {
     id: 2,
     name: "100/82",
     price: 29.99,
-    description: "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
+    description:
+      "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
     image: Img1,
-    brand: "bmw",
+    brand: "BMW",
   },
   {
     id: 3,
@@ -25,7 +26,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "BMW",
   },
   {
     id: 4,
@@ -33,7 +34,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "BMW",
   },
   {
     id: 5,
@@ -41,7 +42,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "BMW",
   },
   {
     id: 6,
@@ -49,7 +50,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "MERCEDES",
   },
   {
     id: 7,
@@ -57,7 +58,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "MERCEDES",
   },
   {
     id: 8,
@@ -65,7 +66,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "MERCEDES",
   },
   {
     id: 9,
@@ -73,7 +74,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "MERCEDES",
   },
   {
     id: 10,
@@ -81,7 +82,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "MERCEDES",
   },
   {
     id: 11,
@@ -89,7 +90,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "AUDI",
   },
   {
     id: 12,
@@ -97,7 +98,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "AUDI",
   },
   {
     id: 13,
@@ -105,7 +106,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "AUDI",
   },
   {
     id: 14,
@@ -113,7 +114,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "AUDI",
   },
   {
     id: 15,
@@ -121,7 +122,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "AUDI",
   },
   {
     id: 16,
@@ -129,7 +130,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "OZ",
   },
   {
     id: 17,
@@ -137,7 +138,7 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "OZ",
   },
   {
     id: 18,
@@ -145,6 +146,54 @@ export const products: Product[] = [
     price: 29.99,
     description: "descricao do produto 2",
     image: Img1,
-    brand: "bmw",
+    brand: "OZ",
+  },
+  {
+    id: 19,
+    name: "produto 19",
+    price: 29.99,
+    description: "descricao do produto 2",
+    image: Img1,
+    brand: "OZ",
+  },
+  {
+    id: 20,
+    name: "produto 20",
+    price: 29.99,
+    description: "descricao do produto 2",
+    image: Img1,
+    brand: "OZ",
+  },
+  {
+    id: 21,
+    name: "produto 21",
+    price: 29.99,
+    description: "descricao do produto 2",
+    image: Img1,
+    brand: "BBS",
+  },
+  {
+    id: 22,
+    name: "produto 22",
+    price: 29.99,
+    description: "descricao do produto 2",
+    image: Img1,
+    brand: "BBS",
+  },
+  {
+    id: 23,
+    name: "produto 23",
+    price: 29.99,
+    description: "descricao do produto 2",
+    image: Img1,
+    brand: "BBS",
+  },
+  {
+    id: 24,
+    name: "produto 24",
+    price: 29.99,
+    description: "descricao do produto 2",
+    image: Img1,
+    brand: "BBS",
   },
 ];
