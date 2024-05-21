@@ -2,14 +2,14 @@
 
 import React from "react";
 
-import bannerAbout from "@/assets/images/banner-about.png";
+import bannerAbout from "@/assets/images/banner-about1.png";
 import Image from "next/image";
 
 const AboutPage: React.FC = () => {
   return (
     <>
       <div>
-        <Image src={bannerAbout} alt="banner about" />
+        <Image className="w-full" src={bannerAbout} alt="banner about" />
       </div>
     </>
   );

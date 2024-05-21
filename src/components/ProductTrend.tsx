@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Product } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,68 +9,31 @@ interface ProductListProps {
   products: Product[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products }) => {
+const ProductTrend: React.FC<ProductListProps> = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
-  const productsPerPage = 12;
+  const productsPerPage = 4;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [currentPage]);
-
-  const handleBrandClick = (brand: string) => {
-    setSelectedBrand(brand);
-    setCurrentPage(1);
-  };
-
-  const handleResetFilter = () => {
-    setSelectedBrand(null);
-    setCurrentPage(1);
-  };
-
-  const filteredProducts = selectedBrand
-    ? products.filter((product) => product.brand === selectedBrand)
-    : products;
+  const topProducts = products.filter((product) => product.top);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = filteredProducts.slice(
+  const currentProducts = topProducts.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
 
-  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const totalPages = Math.ceil(topProducts.length / productsPerPage);
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
     <div className="max-w-[1200px] m-auto">
       <div>
-        <h1 className="text-center text-5xl font-bold mt-6">
-          Lista de produtos
+        <h1 className="text-center text-3xl font-bold mt-6">
+          Os mais vendidos
         </h1>
       </div>
-      <div className="flex justify-center gap-4 mt-6">
-        <button
-          onClick={handleResetFilter}
-          className="p-3 bg-red-500 w-24 rounded text-[#232323]"
-        >
-          <span className="font-bold">TODOS</span>
-        </button>
-        {["BMW", "MERCEDES", "AUDI", "OZ", "BBS"].map((brand) => (
-          <button
-            key={brand}
-            onClick={() => handleBrandClick(brand)}
-            className={`p-3 w-28 rounded ${
-              selectedBrand === brand
-                ? "bg-yellow-500 text-zinc-800"
-                : "bg-[#282828] text-white"
-            }`}
-          >
-            <span className="font-bold">{brand}</span>
-          </button>
-        ))}
-      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
         {currentProducts.map((product) => (
           <Link key={product.id} href={`/product/${product.id}`} passHref>
@@ -105,7 +68,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             className={`px-4 py-2 mx-1 rounded ${
               index + 1 === currentPage
                 ? "bg-yellow-500 text-zinc-800"
-                : "bg-zinc-800 text-white"
+                : "bg-[#282828] text-white"
             }`}
           >
             {index + 1}
@@ -116,4 +79,4 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   );
 };
 
-export default ProductList;
+export default ProductTrend;

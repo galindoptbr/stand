@@ -1,6 +1,8 @@
 import { Product } from "@/types/types";
 
 import Img1 from "@/assets/images/wheels-1.png";
+import Img2 from "@/assets/images/wheels-2.png";
+import Img3 from "@/assets/images/wheels-3.png";
 
 export const products: Product[] = [
   {
@@ -10,6 +12,9 @@ export const products: Product[] = [
     description: "descricao do produto 1",
     image: Img1,
     brand: "BMW",
+    colors: ["Gold", "Silver", "#B87333"],
+    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+    top: true,
   },
   {
     id: 2,
@@ -17,16 +22,22 @@ export const products: Product[] = [
     price: 29.99,
     description:
       "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
-    image: Img1,
+    image: Img2,
     brand: "BMW",
+    colors: ["Gold", "Silver", "#B87333"],
+    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+    top: true,
   },
   {
     id: 3,
     name: "produto 3",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img3,
     brand: "BMW",
+    colors: ["Gold", "Silver", "#B87333"],
+    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+    top: true,
   },
   {
     id: 4,
@@ -35,21 +46,26 @@ export const products: Product[] = [
     description: "descricao do produto 2",
     image: Img1,
     brand: "BMW",
+    colors: ["Gold", "Silver", "#B87333"],
+    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+    top: true,
   },
   {
     id: 5,
     name: "produto 5",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img2,
     brand: "BMW",
+    colors: ["Gold", "Silver", "#B87333"],
+    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
   },
   {
     id: 6,
     name: "produto 6",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img3,
     brand: "MERCEDES",
   },
   {
@@ -65,7 +81,7 @@ export const products: Product[] = [
     name: "produto 8",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img2,
     brand: "MERCEDES",
   },
   {
@@ -73,7 +89,7 @@ export const products: Product[] = [
     name: "produto 9",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img3,
     brand: "MERCEDES",
   },
   {
@@ -89,7 +105,7 @@ export const products: Product[] = [
     name: "produto 11",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img2,
     brand: "AUDI",
   },
   {
@@ -97,7 +113,7 @@ export const products: Product[] = [
     name: "produto 12",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    image: Img3,
     brand: "AUDI",
   },
   {

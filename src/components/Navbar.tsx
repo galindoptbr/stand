@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Navbar = () => {
   return (
     <>
-      <div className="w-full bg-zinc-900">
+      <div className="w-full bg-[#181818]">
         <div className="flex justify-between m-auto p-5 max-w-[1200px]">
           <Image className="w-36" src={logoOlavo} alt="logo olavo" />
           <ul className="flex justify-center gap-4 items-center font-semibold">
@@ -17,10 +17,10 @@ export const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/aboutpage" replace>Sobre</Link>
+              <Link href="/catalog">Catalogo</Link>
             </li>
             <li>
-              <Link href="/">Catalogo</Link>
+              <Link href="/about">Sobre</Link>
             </li>
           </ul>
         </div>

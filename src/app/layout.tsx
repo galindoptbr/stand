@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt">
-      <body className="text-zinc-100 bg-black">
+      <body className="text-zinc-100 bg-[#232323]">
         <Navbar />
         {children}
         <Footer />

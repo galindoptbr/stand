@@ -9,4 +9,7 @@ export interface Product {
   description: string;
   image: ImageType;
   brand: string;
+  colors?: string[];
+  diameters?: string[];
+  top?: boolean;
 }
