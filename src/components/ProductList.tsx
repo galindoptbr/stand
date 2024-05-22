@@ -44,10 +44,10 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="max-w-[1200px] m-auto">
+    <div className="max-w-[1200px] m-auto mt-20">
       <div>
         <h1 className="text-center text-5xl font-bold mt-6">
-          Lista de produtos
+          Catalogo de produtos
         </h1>
       </div>
       <div className="flex justify-center gap-4 mt-6">

@@ -28,10 +28,11 @@ const ProductTrend: React.FC<ProductListProps> = ({ products }) => {
 
   return (
     <div className="max-w-[1200px] m-auto">
-      <div>
-        <h1 className="text-center text-3xl font-bold mt-6">
-          Os mais vendidos
+      <div className="mt-16">
+        <h1 className=" text-3xl font-bold">
+          Mais vendidos🔥
         </h1>
+        <p className="text-zinc-400">Veja nossa lista de modelos mais vendidos. </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8">

@@ -17,29 +17,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
 
   return (
     <>
-      <div className="w-full h-10 bg-yellow-400">
-        <div className="flex justify-center gap-4">
-          <div className="flex items-center mt-1 gap-4 text-zinc-900">
-            <CiDeliveryTruck size={30} />
-            <span className="font-semibold text-md">
-              Porte Gratis acima de € 100{" "}
-            </span>
-          </div>
-          <div className="flex items-center mt-1 gap-4 text-zinc-900">
-            <SlPrinter size={25} />
-            <span className="font-semibold text-md">
-              Impressao feita em 24hs{" "}
-            </span>
-          </div>
-          <div className="flex items-center mt-1 gap-4 text-zinc-900">
-            <SlLocationPin size={25} />
-            <span className="font-semibold text-md">
-              Aberto 7 dias por semana{" "}
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="bg-[#282828] mt-24">
+      <div className="bg-[#282828] mt-28">
         <div className="flex max-w-[1200px] m-auto p-4">
           <div className="w-1/2">
             <Image
@@ -77,7 +55,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
                 <strong className="mr-4">Diâmetros:</strong>
                 <div className="flex gap-2 mt-2">
                   {product.diameters.map((diameter, index) => (
-                    <p className="p-1 w-14 rounded text-center font-semibold bg-zinc-900" key={index}>
+                    <p
+                      className="p-1 w-14 rounded text-center font-semibold bg-zinc-900"
+                      key={index}
+                    >
                       {diameter}
                     </p>
                   ))}

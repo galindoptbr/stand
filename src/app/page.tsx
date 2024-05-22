@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import { Banner } from "@/components/Banner";
 import ProductTrend from "@/components/ProductTrend";
 import { MiniBanners } from "@/components/MiniBanners";
+import { Depositions } from "@/components/Depositions";
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
         <Banner />
         <MiniBanners />
         <ProductTrend products={products} />
+        <Depositions />
       </div>
     </>
   );

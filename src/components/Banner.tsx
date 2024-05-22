@@ -11,21 +11,21 @@ export const Banner = () => {
       <div>
         <Image className="w-full m-auto" src={bannerTopo} alt="Banner site" />
       </div>
-      <div className="w-full h-20 bg-yellow-400">
+      <div className="w-full h-20 bg-zinc-600">
         <div className="flex justify-center gap-4">
-          <div className="flex items-center mt-6 gap-4 text-zinc-900 border-e-2 border-zinc-600">
-            <CiDeliveryTruck size={30} />
+          <div className="flex items-center mt-6 gap-4 text-zinc-300 border-e-2 border-zinc-300">
+            <CiDeliveryTruck size={35} />
             <span className="font-semibold text-md mr-4">
-              Porte Gratis acima de € 100{" "}
+              Portes grátis acima de € 100{" "}
             </span>
           </div>
-          <div className="flex items-center mt-6 gap-4 text-zinc-900 border-e-2 border-zinc-600">
+          <div className="flex items-center mt-6 gap-4 text-zinc-300 border-e-2 border-zinc-300">
             <SlPrinter size={25} />
             <span className="font-semibold text-md mr-4">
-              Impressao feita em 24hs{" "}
+              Impressão feita em 24hs{" "}
             </span>
           </div>
-          <div className="flex items-center mt-6 gap-4 text-zinc-900">
+          <div className="flex items-center mt-6 gap-4 text-zinc-300">
             <SlLocationPin size={25} />
             <span className="font-semibold text-md">
               Aberto 7 dias por semana{" "}
