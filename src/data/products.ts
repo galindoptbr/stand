@@ -10,7 +10,7 @@ export const products: Product[] = [
     name: "produto 1",
     price: 29.99,
     description: "descricao do produto 1",
-    image: Img1,
+    images: [Img1, Img2, Img3],
     brand: "BMW",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
@@ -22,7 +22,7 @@ export const products: Product[] = [
     price: 29.99,
     description:
       "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
-    image: Img2,
+    images: [Img1, Img2, Img3],
     brand: "BMW",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
@@ -33,7 +33,7 @@ export const products: Product[] = [
     name: "produto 3",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img3,
+    images: [Img3],
     brand: "BMW",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
@@ -44,7 +44,7 @@ export const products: Product[] = [
     name: "produto 4",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "BMW",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
@@ -55,7 +55,7 @@ export const products: Product[] = [
     name: "produto 5",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img2,
+    images: [Img2],
     brand: "BMW",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
@@ -65,7 +65,7 @@ export const products: Product[] = [
     name: "produto 6",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img3,
+    images: [Img3],
     brand: "MERCEDES",
   },
   {
@@ -73,7 +73,7 @@ export const products: Product[] = [
     name: "produto 7",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "MERCEDES",
   },
   {
@@ -81,7 +81,7 @@ export const products: Product[] = [
     name: "produto 8",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img2,
+    images: [Img2],
     brand: "MERCEDES",
   },
   {
@@ -89,7 +89,7 @@ export const products: Product[] = [
     name: "produto 9",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img3,
+    images: [Img3],
     brand: "MERCEDES",
   },
   {
@@ -97,7 +97,7 @@ export const products: Product[] = [
     name: "produto 10",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "MERCEDES",
   },
   {
@@ -105,7 +105,7 @@ export const products: Product[] = [
     name: "produto 11",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img2,
+    images: [Img2],
     brand: "AUDI",
   },
   {
@@ -113,7 +113,7 @@ export const products: Product[] = [
     name: "produto 12",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img3,
+    images: [Img3],
     brand: "AUDI",
   },
   {
@@ -121,7 +121,7 @@ export const products: Product[] = [
     name: "produto 13",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "AUDI",
   },
   {
@@ -129,7 +129,7 @@ export const products: Product[] = [
     name: "produto 14",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "AUDI",
   },
   {
@@ -137,7 +137,7 @@ export const products: Product[] = [
     name: "produto 15",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "AUDI",
   },
   {
@@ -145,7 +145,7 @@ export const products: Product[] = [
     name: "produto 16",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "OZ",
   },
   {
@@ -153,7 +153,7 @@ export const products: Product[] = [
     name: "produto 17",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "OZ",
   },
   {
@@ -161,7 +161,7 @@ export const products: Product[] = [
     name: "produto 18",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "OZ",
   },
   {
@@ -169,7 +169,7 @@ export const products: Product[] = [
     name: "produto 19",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "OZ",
   },
   {
@@ -177,7 +177,7 @@ export const products: Product[] = [
     name: "produto 20",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "OZ",
   },
   {
@@ -185,7 +185,7 @@ export const products: Product[] = [
     name: "produto 21",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "BBS",
   },
   {
@@ -193,7 +193,7 @@ export const products: Product[] = [
     name: "produto 22",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "BBS",
   },
   {
@@ -201,7 +201,7 @@ export const products: Product[] = [
     name: "produto 23",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "BBS",
   },
   {
@@ -209,7 +209,7 @@ export const products: Product[] = [
     name: "produto 24",
     price: 29.99,
     description: "descricao do produto 2",
-    image: Img1,
+    images: [Img1],
     brand: "BBS",
   },
 ];

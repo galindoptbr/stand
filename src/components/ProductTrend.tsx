@@ -40,7 +40,7 @@ const ProductTrend: React.FC<ProductListProps> = ({ products }) => {
           <Link key={product.id} href={`/product/${product.id}`} passHref>
             <div className="bg-[#282828] rounded-lg p-4 cursor-pointer">
               <Image
-                src={product.image}
+                src={product.images[0]}
                 alt={product.name}
                 width={300}
                 height={300}

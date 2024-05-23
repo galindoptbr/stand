@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export const MiniBanners = () => {
   return (
-    <div className="flex justify-center gap-4 mt-10">
+    <div className="flex justify-center gap-4 mt-16">
       <Link href="/catalog">
         <Image className="rounded-xl" src={banner1} alt="banner 1" />
       </Link>

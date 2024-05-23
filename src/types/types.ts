@@ -7,7 +7,7 @@ export interface Product {
   name: string;
   price: number;
   description: string;
-  image: ImageType;
+  images: ImageType[];
   brand: string;
   colors?: string[];
   diameters?: string[];

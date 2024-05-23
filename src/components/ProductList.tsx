@@ -45,10 +45,11 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
 
   return (
     <div className="max-w-[1200px] m-auto mt-20">
-      <div>
-        <h1 className="text-center text-5xl font-bold mt-6">
-          Catalogo de produtos
-        </h1>
+      <div className="flex flex-col text-center mt-12">
+        <p className="text-3xl font-semibold">Catálogo de produtos</p>
+        <p className="text-zinc-400">
+          Conheça todos os nossos produtos ou pesquise por marcas.
+        </p>
       </div>
       <div className="flex justify-center gap-4 mt-6">
         <button
@@ -76,7 +77,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
           <Link key={product.id} href={`/product/${product.id}`} passHref>
             <div className="bg-[#282828] rounded-lg p-4 cursor-pointer">
               <Image
-                src={product.image}
+                src={product.images[0]}
                 alt={product.name}
                 width={300}
                 height={300}

@@ -1,53 +1,134 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
-import { SlSocialFacebook, SlSocialInstagram } from "react-icons/sl";
-
-import logoOlavo from "@/assets/images/logo-olavo.png";
 import paymentsMethods from "@/assets/images/payments.png";
+import { BsWhatsapp } from "react-icons/bs";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { ImFacebook2, ImInstagram, ImYoutube } from "react-icons/im";
+import { CiLinkedin } from "react-icons/ci";
 
 export const Footer = () => {
+  const pathname = usePathname();
   return (
     <>
-      <div className="w-full bg-[#181818] mt-24 p-6 h-96">
+      <div className="w-full bg-[#181818] mt-24 p-6 h-72">
         <div className="flex justify-between max-w-[1200px] m-auto gap-6">
-          <div className="flex flex-col gap-4 w-64   ">
-            <Image className="w-36" src={logoOlavo} alt="logo Olavo" />
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-              in ex modi quasi reiciendis.
-            </span>
-            <div className="flex flex-col gap-6">
-              <span className="font-semibold">Saiba mais</span>
-              <div className="flex gap-2">
-                <SlSocialFacebook size={20} />
-                <SlSocialInstagram size={20} />
-              </div>
+          <div className="flex flex-col gap-4 w-96">
+            <p className="font-semibold text-xl">Informações de contato</p>
+            <div className="flex gap-4">
+              <BsWhatsapp className="text-green-500" size={40} />
+              <p>
+                Você tem alguma pergunta? <br /> Envie uma mensagem para nós
+                pelo WhatsApp:
+              </p>
             </div>
+            <a
+              href="https://wa.link/8l2ndh"
+              target="_blank"
+              className="inline-block"
+            >
+              <button className="flex items-center justify-center gap-2 bg-green-600 p-2 rounded-full w-full m-auto hover:bg-green-500 transition-colors duration-300">
+                <BsWhatsapp />
+                <span className="font-semibold">Enviar mensagem</span>
+              </button>
+            </a>
           </div>
-          <div className="flex flex-col gap-6">
-            <span className="font-bold">Contatos</span>
-            <div className="flex flex-col gap-3">
-              <span className="font-semibold">Endereco</span>
-              <span>123 Street Name, City, England</span>
-            </div>
-            <div className="flex flex-col gap-3">
-              <span className="font-semibold">Telefone</span>
-              <span>Tell Free (123) 456-7890</span>
-            </div>
-            <div className="flex flex-col gap-3">
-              <span className="font-semibold">EMAIL</span>
-              <span>mail@example.com</span>
-            </div>
+
+          <div className="flex flex-col">
+            <p className="font-semibold text-xl mb-4">índice</p>
+            <ul className="flex flex-col gap-2">
+              <li>
+                <Link
+                  href="/"
+                  replace
+                  className={`transition-colors duration-300 flex items-center ${
+                    pathname === "/"
+                      ? "text-yellow-500"
+                      : "text-white hover:text-yellow-500"
+                  }`}
+                >
+                  <MdKeyboardArrowRight />
+                  Início
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/catalog"
+                  className={`transition-colors duration-300 flex items-center ${
+                    pathname === "/catalog"
+                      ? "text-yellow-500"
+                      : "text-white hover:text-yellow-500"
+                  }`}
+                >
+                  <MdKeyboardArrowRight />
+                  Catálogo
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className={`transition-colors duration-300 flex items-center ${
+                    pathname === "/about"
+                      ? "text-yellow-500"
+                      : "text-white hover:text-yellow-500"
+                  }`}
+                >
+                  <MdKeyboardArrowRight />
+                  Sobre
+                </Link>
+              </li>
+            </ul>
           </div>
-          <div>
-            <span className="font-bold">Formas de Pagamento</span>
+
+          <div className="flex flex-col items-center">
+            <p className="font-bold">Formas de Pagamento</p>
             <Image
-              className="w-36 mt-4 rounded-md"
+              className="w-48 mt-4 rounded-md"
               src={paymentsMethods}
               alt="metodos de pagamento"
             />
+            <div className="flex flex-col mt-4 items-center">
+              <p className="font-bold mb-3">Nos siga nas redes sociais:</p>
+              <div className="flex gap-3">
+                <Link
+                  href="https://www.instagram.com/olavo_scalewheels/"
+                  target="_blank"
+                >
+                  <ImInstagram className="hover:text-zinc-300" size={30} />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/share/jrqFPLurXjgrjVof/"
+                  target="_blank"
+                >
+                  <ImFacebook2 className="hover:text-zinc-300" size={30} />
+                </Link>
+                <Link
+                  href="https://www.youtube.com/@hwcollectors8537"
+                  target="_blank"
+                >
+                  <ImYoutube className="hover:text-zinc-300" size={35} />
+                </Link>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className="w-full h-16 border-t-2 border-zinc-700 bg-[#181818]">
+        <div className="flex gap-2 justify-center mt-4">
+          <p>© 2024 desenvolvido por -</p>
+          <span className="flex items-center text-blue-500 hover:text-blue-400">
+            <CiLinkedin />
+            <Link
+              href="https://www.linkedin.com/in/galindoptbr/"
+              target="_blank"
+            >
+              <p className="cursor-pointer">GalindoPtBr</p>
+            </Link>
+          </span>
         </div>
       </div>
     </>

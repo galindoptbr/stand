@@ -1,37 +1,92 @@
 "use client";
 
-import { Product } from "@/types/types";
+import { useState } from "react";
+import { Product, ImageType } from "@/types/types";
 import Image from "next/image";
-import { CiDeliveryTruck } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
-import { SlLocationPin, SlPrinter } from "react-icons/sl";
+import { IoShieldCheckmark } from "react-icons/io5";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import ProductTrend from "@/components/ProductTrend";
+import { products } from "@/data/products";
 
 interface ProductPageProps {
   product: Product;
 }
 
 const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
+  const pathname = usePathname();
+  const [mainImage, setMainImage] = useState<ImageType>(product.images[0]);
+
   if (!product) {
     return <div>Product not found</div>;
   }
 
   return (
     <>
-      <div className="bg-[#282828] mt-28">
+      <div className="flex gap-2 p-10 m-auto max-w-[1200px] ">
+        <ul className="flex gap-2">
+          <li>
+            <Link
+              href="/"
+              replace
+              className={`transition-colors duration-300 ${
+                pathname === "/"
+                  ? "text-yellow-500"
+                  : "text-zinc-400 hover:text-yellow-500"
+              }`}
+            >
+              Início /
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/catalog"
+              className={`transition-colors duration-300 ${
+                pathname === "/catalog"
+                  ? "text-yellow-500"
+                  : "text-zinc-400 hover:text-yellow-500"
+              }`}
+            >
+              Catálogo /
+            </Link>
+          </li>
+        </ul>
+        <p className="text-zinc-400">{product.name}</p>
+      </div>
+      <div className="bg-[#282828]">
         <div className="flex max-w-[1200px] m-auto p-4">
           <div className="w-1/2">
             <Image
-              src={product.image}
+              src={mainImage}
               alt={product.name}
               width={2000}
               height={2000}
-              className="w-[2000px] rounded"
+              className="w-full rounded"
               priority
             />
+            <div className="flex mt-4 gap-2">
+              {product.images.map((image, index) => (
+                <Image
+                  key={index}
+                  src={image}
+                  alt={`${product.name} thumbnail ${index + 1}`}
+                  width={100}
+                  height={100}
+                  className={`w-20 h-20 object-cover rounded cursor-pointer ${
+                    mainImage === image
+                      ? "border-2 border-yellow-500"
+                      : "border-2 border-transparent"
+                  }`}
+                  onClick={() => setMainImage(image)}
+                />
+              ))}
+            </div>
           </div>
-          <div className="flex flex-col w-1/2 m-auto px-10">
+          <div className="flex flex-col w-1/2 mt-5 px-10 border-s-2 border-zinc-700">
             <p className="mb-2 text-zinc-500">{product.brand}</p>
-            <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
+            <h1 className="text-2xl font-bold">{product.name}</h1>
+            <p className="mb-3 text-sm">⭐️⭐️⭐️⭐️⭐️</p>
             <p className="text-3xl font-semibold mb-4">
               € {product.price?.toFixed(2)}
             </p>
@@ -70,14 +125,32 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
               target="_blank"
               className="inline-block"
             >
-              <button className=" flex items-center justify-center gap-2 bg-green-600 p-2 rounded-full w-full m-auto">
+              <button className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 transition-colors duration-300 p-2 rounded-full w-full m-auto">
                 <FaWhatsapp />
                 <span className="font-semibold">Fazer pedido</span>
               </button>
             </a>
+            <div className="flex flex-col gap-2 mt-8">
+              <p className="font-semibold text-zinc-400">
+                Portes Grátis para pedidos acima de 5 unidades/sets!
+              </p>
+              <span className="flex items-center gap-3 text-zinc-400">
+                <IoShieldCheckmark size={15} />
+                <p>Satisfação garantida</p>
+              </span>
+              <span className="flex items-center gap-3 text-zinc-400">
+                <IoShieldCheckmark size={15} />
+                <p>Reembolsos sem complicações</p>
+              </span>
+              <span className="flex items-center gap-3 text-zinc-400">
+                <IoShieldCheckmark size={15} />
+                <p>Pagamentos Seguros</p>
+              </span>
+            </div>
           </div>
         </div>
       </div>
+      <ProductTrend products={products} />
     </>
   );
 };
