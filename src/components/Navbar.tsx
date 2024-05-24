@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -9,13 +9,29 @@ import logoOlavo from "@/assets/images/logo-olavo.png";
 
 export const Navbar = () => {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <>
-      <div className="w-full bg-[#181818] shadow-lg">
+      <div className="w-full bg-[#181818] shadow-lg relative">
         <div className="flex justify-between items-center m-auto p-4 max-w-[1200px]">
-          <Image className="w-24 rounded-lg" src={logoOlavo} alt="logo olavo" />
-          <ul className="flex justify-center gap-8 items-center font-semibold">
+          <Link href="/" replace>
+            <Image
+              className="w-24 rounded-lg"
+              src={logoOlavo}
+              alt="logo olavo"
+            />
+          </Link>
+          {/* Navbar para telas grandes */}
+          <ul className="hidden lg:flex gap-8 items-center font-semibold">
             <li>
               <Link
                 href="/"
@@ -54,7 +70,78 @@ export const Navbar = () => {
               </Link>
             </li>
           </ul>
+          <button
+            onClick={toggleMenu}
+            className="block lg:hidden text-white focus:outline-none"
+          >
+            {isMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
         </div>
+        {/* Menu para telas pequenas */}
+        <ul
+          className={`lg:hidden bg-[#181818] fixed inset-y-0 top-20 left-0 h-1/2 w-full z-10 flex flex-col justify-center items-center transition-all duration-300 gap-8 ${
+            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <li>
+            <Link
+              href="/"
+              replace
+              className={`text-white hover:text-yellow-500`}
+              onClick={closeMenu}
+            >
+              Início
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/catalog"
+              className={`text-white hover:text-yellow-500`}
+              onClick={closeMenu}
+            >
+              Catálogo
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/about"
+              className={`text-white hover:text-yellow-500`}
+              onClick={closeMenu}
+            >
+              Sobre
+            </Link>
+          </li>
+        </ul>
       </div>
     </>
   );

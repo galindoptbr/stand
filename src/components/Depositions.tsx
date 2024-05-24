@@ -14,16 +14,16 @@ export const Depositions = () => {
           Verifique nossas últimas avaliações de clientes e dê seu feedback.
         </span>
       </div>
-      <div className="m-auto max-w-[1200px] rounded-md h-56 bg-[#282828] mt-6">
-        <div className="flex justify-center gap-8 p-8">
-          <div className="border-e-2 border-zinc-600">
+      <div className="mt-6 h-[620px] max-w-[1200px] rounded-md bg-[#282828] lg:m-auto lg:mt-6 lg:h-56">
+        <div className="flex flex-col justify-center gap-8 p-8 lg:flex-row">
+          <div className="border-b-2 lg:border-e-2 lg:border-b-0 border-zinc-600">
             <p className="w-80 text-zinc-400 mr-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
               tempora itaque facere eveniet quasi!
             </p>
             <div className="flex gap-4 mt-6">
               <Image
-                className="w-14"
+                className="w-14 mb-4"
                 src={profileImage}
                 alt="imagem de perfil"
               />
@@ -33,14 +33,14 @@ export const Depositions = () => {
               </div>
             </div>
           </div>
-          <div className="border-e-2 border-zinc-600">
+          <div className="border-b-2 lg:border-e-2 lg:border-b-0 border-zinc-600">
             <p className="w-80 text-zinc-400 mr-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
               tempora itaque facere eveniet quasi!
             </p>
             <div className="flex gap-4 mt-6">
               <Image
-                className="w-14"
+                className="w-14 mb-4"
                 src={profileImage}
                 alt="imagem de perfil"
               />
@@ -50,14 +50,14 @@ export const Depositions = () => {
               </div>
             </div>
           </div>
-          <div className="">
+          <div>
             <p className="w-80 text-zinc-400 mr-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
               tempora itaque facere eveniet quasi!
             </p>
             <div className="flex gap-4 mt-6">
               <Image
-                className="w-14"
+                className="w-14 mb-4"
                 src={profileImage}
                 alt="imagem de perfil"
               />

@@ -15,9 +15,9 @@ export const Footer = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-full bg-[#181818] mt-24 p-6 h-72">
-        <div className="flex justify-between max-w-[1200px] m-auto gap-6">
-          <div className="flex flex-col gap-4 w-96">
+      <div className="w-full bg-[#181818] mt-24 p-6 h-[600px] lg:h-72">
+        <div className="flex flex-col items-center justify-between max-w-[1200px] m-auto gap-6 lg:flex-row">
+          <div className="flex flex-col gap-4 w-96 p-4 lg:p-0">
             <p className="font-semibold text-xl">Informações de contato</p>
             <div className="flex gap-4">
               <BsWhatsapp className="text-green-500" size={40} />

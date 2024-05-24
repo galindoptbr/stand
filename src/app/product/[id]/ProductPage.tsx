@@ -55,8 +55,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
         <p className="text-zinc-400">{product.name}</p>
       </div>
       <div className="bg-[#282828]">
-        <div className="flex max-w-[1200px] m-auto p-4">
-          <div className="w-1/2">
+        <div className="flex flex-col lg:flex-row max-w-[1200px] m-auto p-4">
+          <div className="lg:w-1/2">
             <Image
               src={mainImage}
               alt={product.name}
@@ -83,7 +83,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col w-1/2 mt-5 px-10 border-s-2 border-zinc-700">
+          <div className="flex flex-col lg:w-1/2 mt-5 lg:px-10 lg:border-s-2 border-zinc-700">
             <p className="mb-2 text-zinc-500">{product.brand}</p>
             <h1 className="text-2xl font-bold">{product.name}</h1>
             <p className="mb-3 text-sm">⭐️⭐️⭐️⭐️⭐️</p>
@@ -108,7 +108,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
             {product.diameters && (
               <div className="flex items-center mb-10">
                 <strong className="mr-4">Diâmetros:</strong>
-                <div className="flex gap-2 mt-2">
+                <div className="grid grid-cols-3 lg:flex gap-2 mt-2">
                   {product.diameters.map((diameter, index) => (
                     <p
                       className="p-1 w-14 rounded text-center font-semibold bg-zinc-900"
