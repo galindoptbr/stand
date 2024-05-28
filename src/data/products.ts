@@ -24,7 +24,7 @@ export const products: Product[] = [
       "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
     images: [Img1, Img2, Img3],
     brand: "BMW",
-    colors: ["Gold", "Silver", "#B87333"],
+    colors: ["Gold", "#bfbfbf", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
     top: true,
   },
@@ -59,6 +59,7 @@ export const products: Product[] = [
     brand: "BMW",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+    top: true,
   },
   {
     id: 6,
@@ -211,5 +212,13 @@ export const products: Product[] = [
     description: "descricao do produto 2",
     images: [Img1],
     brand: "BBS",
+  },
+  {
+    id: 25,
+    name: "produto 24",
+    price: 29.99,
+    description: "descricao do produto 2",
+    images: [Img1],
+    brand: "VW",
   },
 ];
