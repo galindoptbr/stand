@@ -21,13 +21,8 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
-  const handleBrandClick = (brand: string) => {
-    setSelectedBrand(brand);
-    setCurrentPage(1);
-  };
-
-  const handleResetFilter = () => {
-    setSelectedBrand(null);
+  const handleBrandChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedBrand(event.target.value);
     setCurrentPage(1);
   };
 
@@ -45,6 +40,8 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  const brands = ["BMW", "MERCEDES", "AUDI", "OZ", "BBS", "VW"];
 
   return (
     <>
@@ -84,26 +81,19 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
             Conheça todos os nossos produtos ou pesquise por marcas.
           </p>
         </div>
-        <div className="grid grid-cols-3 p-2 lg:flex justify-center gap-4 mt-6">
-          <button
-            onClick={handleResetFilter}
-            className="p-3 bg-red-500 w-24 rounded text-[#232323]"
+        <div className="flex justify-center gap-4 mt-6">
+          <select
+            onChange={handleBrandChange}
+            value={selectedBrand || ""}
+            className="p-3 bg-[#282828] text-yellow-500 font-bold rounded w-80"
           >
-            <span className="font-bold">TODOS</span>
-          </button>
-          {["BMW", "MERCEDES", "AUDI", "OZ", "BBS"].map((brand) => (
-            <button
-              key={brand}
-              onClick={() => handleBrandClick(brand)}
-              className={`p-3 w-28 rounded ${
-                selectedBrand === brand
-                  ? "bg-yellow-500 text-zinc-800"
-                  : "bg-[#282828] text-white"
-              }`}
-            >
-              <span className="font-bold">{brand}</span>
-            </button>
-          ))}
+            <option value="">TODOS</option>
+            {brands.map((brand) => (
+              <option key={brand} value={brand}>
+                {brand}
+              </option>
+            ))}
+          </select>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 p-2 lg:p-0">
           {currentProducts.map((product) => (
