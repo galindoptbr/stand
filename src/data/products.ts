@@ -12,7 +12,7 @@ export const products: Product[] = [
     name: "General LEE",
     price: 3,
     description:
-      "loremloremloremlorem loremloremloremlorem lorem loremloremloremloremloremloremloremloremloremloremloremloremlorem",
+      "teste",
     images: [A144_01, Img2, Img3],
     brand: "FIAT",
     colors: ["Gold", "Silver", "#B87333"],
