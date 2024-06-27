@@ -41,7 +41,7 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
 
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
-  const brands = ["BMW", "MERCEDES", "AUDI", "OZ", "BBS", "VW"];
+  const brands = ["BMW", "FIAT", "MERCEDES", "AUDI", "OZ", "BBS", "VW"];
 
   return (
     <>

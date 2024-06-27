@@ -3,15 +3,18 @@ import { Product } from "@/types/types";
 import Img1 from "@/assets/images/wheels-1.png";
 import Img2 from "@/assets/images/wheels-2.png";
 import Img3 from "@/assets/images/wheels-3.png";
+import A01G_01 from "@/assets/images/001/001G-001.jpg";
+import A144_01 from "@/assets/images/144/A144.png";
 
 export const products: Product[] = [
   {
     id: 1,
-    name: "produto 1",
-    price: 29.99,
-    description: "descricao do produto 1",
-    images: [Img1, Img2, Img3],
-    brand: "BMW",
+    name: "General LEE",
+    price: 3,
+    description:
+      "loremloremloremlorem loremloremloremlorem lorem loremloremloremloremloremloremloremloremloremloremloremloremlorem",
+    images: [A144_01, Img2, Img3],
+    brand: "FIAT",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
     top: true,
@@ -215,6 +218,14 @@ export const products: Product[] = [
   },
   {
     id: 25,
+    name: "produto 24",
+    price: 29.99,
+    description: "descricao do produto 2",
+    images: [Img1],
+    brand: "VW",
+  },
+  {
+    id: 26,
     name: "produto 24",
     price: 29.99,
     description: "descricao do produto 2",
