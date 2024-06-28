@@ -20,8 +20,8 @@ export const products: Product[] = [
       "teste",
     images: [A121_01, A121_02, A121_03,A121_04],
     brand: "Datsun",
-    colors: ["Gold", "Silver", "#B87333"],
-    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+    colors: ["#000000", "#ffffff", "#daa520", "#bfbfbf", "#B87333", ],
+    diameters: ["11"],
     top: true,
   },
   {
