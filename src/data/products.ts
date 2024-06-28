@@ -24,6 +24,7 @@ export const products: Product[] = [
     diameters: ["11"],
     top: true,
   },
+  /*
   {
     id: 2,
     name: "100/82",
@@ -237,4 +238,5 @@ export const products: Product[] = [
     images: [Img1],
     brand: "VW",
   },
+  */
 ];
