@@ -4,17 +4,22 @@ import Img1 from "@/assets/images/wheels-1.png";
 import Img2 from "@/assets/images/wheels-2.png";
 import Img3 from "@/assets/images/wheels-3.png";
 import A01G_01 from "@/assets/images/001/001G-001.jpg";
+import A121_01 from "@/assets/images/121/121_001.png";
+import A121_02 from "@/assets/images/121/121_002.png";
+import A121_03 from "@/assets/images/121/121_003.png";
+import A121_04 from "@/assets/images/121/121_004.png";
 import A144_01 from "@/assets/images/144/A144.png";
+
 
 export const products: Product[] = [
   {
-    id: 1,
-    name: "General LEE",
+    id: 121,
+    name: "MiniLite",
     price: 3,
     description:
       "teste",
-    images: [A144_01, Img2, Img3],
-    brand: "FIAT",
+    images: [A121_01, A121_02, A121_03,A121_04],
+    brand: "Datsun",
     colors: ["Gold", "Silver", "#B87333"],
     diameters: ["9", "10", "10,6", "11", "12", "12,6"],
     top: true,
