@@ -4,6 +4,10 @@ import Img1 from "@/assets/images/wheels-1.png";
 import Img2 from "@/assets/images/wheels-2.png";
 import Img3 from "@/assets/images/wheels-3.png";
 import A01G_01 from "@/assets/images/001/001G-001.jpg";
+import A058_01 from "@/assets/images/058/058_001.png";
+import A058_02 from "@/assets/images/058/058_002.png";
+import A058_03 from "@/assets/images/058/058_003.png";
+import A058_04 from "@/assets/images/058/058_004.png";
 import A121_01 from "@/assets/images/121/121_001.png";
 import A121_02 from "@/assets/images/121/121_002.png";
 import A121_03 from "@/assets/images/121/121_003.png";
@@ -24,19 +28,20 @@ export const products: Product[] = [
     diameters: ["11"],
     top: true,
   },
-  /*
+  
   {
-    id: 2,
-    name: "100/82",
-    price: 29.99,
+    id: 58,
+    name: "Watanabe",
+    price: 3,
     description:
-      "Leve o realismo e a precisão dos modelos de carros em miniatura para o próximo nível com nossa roda de carro miniatura. Projetada com meticuloso cuidado, esta roda é a escolha perfeita para colecionadores exigentes e entusiastas de modelismo automotivo.",
-    images: [Img1, Img2, Img3],
-    brand: "BMW",
-    colors: ["Gold", "#bfbfbf", "#B87333"],
-    diameters: ["9", "10", "10,6", "11", "12", "12,6"],
+      "As rodas Watanabe em escala 1:64 são uma réplica detalhada e autêntica das icônicas rodas Watanabe utilizadas em carros clássicos japoneses. Com acabamento de alta qualidade e design fiel ao original, essas miniaturas são perfeitas para colecionadores e entusiastas de modelismo que buscam adicionar um toque de realismo e estilo aos seus veículos em miniatura.",
+    images: [A058_01,A058_02,A058_03,A058_04],
+    brand: "GISA",
+    colors: ["#000000", "#ffffff", "#daa520", "#bfbfbf", "#B87333", ],
+    diameters: ["10","11",],
     top: true,
   },
+  /*
   {
     id: 3,
     name: "produto 3",
