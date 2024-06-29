@@ -62,7 +62,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
               alt={product.name}
               width={2000}
               height={2000}
-              className="w-full rounded"
+              className="w-full rounded pr-8"
               priority
             />
             <div className="flex mt-4 gap-2">
@@ -83,7 +83,7 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
               ))}
             </div>
           </div>
-          <div className="flex flex-col lg:w-1/2 mt-5 lg:px-10 lg:border-s-2 border-zinc-700">
+          <div className="flex flex-col lg:w-1/2 mt-5 lg:px-8 lg:border-s-2 border-zinc-700">
             <p className="mb-2 text-zinc-500">{product.brand}</p>
             <h1 className="text-2xl font-bold">{product.name}</h1>
             <p className="mb-3 text-sm">⭐️⭐️⭐️⭐️⭐️</p>

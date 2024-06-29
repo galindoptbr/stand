@@ -1,8 +1,6 @@
 import { Product } from "@/types/types";
 
-import Img1 from "@/assets/images/wheels-1.png";
-import Img2 from "@/assets/images/wheels-2.png";
-import Img3 from "@/assets/images/wheels-3.png";
+
 import A01G_01 from "@/assets/images/001/001G-001.jpg";
 import A058_01 from "@/assets/images/058/058_001.png";
 import A058_02 from "@/assets/images/058/058_002.png";
@@ -14,31 +12,29 @@ import A121_03 from "@/assets/images/121/121_003.png";
 import A121_04 from "@/assets/images/121/121_004.png";
 import A144_01 from "@/assets/images/144/A144.png";
 
-
 export const products: Product[] = [
   {
     id: 121,
     name: "MiniLite",
     price: 3,
-    description:
-      "teste",
-    images: [A121_01, A121_02, A121_03,A121_04],
+    description: "teste",
+    images: [A121_01, A121_02, A121_03, A121_04],
     brand: "Datsun",
-    colors: ["#000000", "#ffffff", "#daa520", "#bfbfbf", "#B87333", ],
+    colors: ["#000000", "#ffffff", "#daa520", "#bfbfbf", "#B87333"],
     diameters: ["11"],
     top: true,
   },
-  
+
   {
     id: 58,
     name: "Watanabe",
     price: 3,
     description:
       "As rodas Watanabe em escala 1:64 são uma réplica detalhada e autêntica das icônicas rodas Watanabe utilizadas em carros clássicos japoneses. Com acabamento de alta qualidade e design fiel ao original, essas miniaturas são perfeitas para colecionadores e entusiastas de modelismo que buscam adicionar um toque de realismo e estilo aos seus veículos em miniatura.",
-    images: [A058_01,A058_02,A058_03,A058_04],
+    images: [A058_01, A058_02, A058_03, A058_04],
     brand: "GISA",
-    colors: ["#000000", "#ffffff", "#daa520", "#bfbfbf", "#B87333", ],
-    diameters: ["10","11",],
+    colors: ["#000000", "#ffffff", "#daa520", "#bfbfbf", "#B87333"],
+    diameters: ["10", "11"],
     top: true,
   },
   /*
