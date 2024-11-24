@@ -5,17 +5,50 @@ import { Product } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { db } from "@/services/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
-interface ProductListProps {
-  products: Product[];
-}
-
-const ProductList: React.FC<ProductListProps> = ({ products }) => {
+const ProductList: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
   const productsPerPage = 12;
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "products"));
+        
+        // Garantindo que cada documento seja formatado para corresponder ao tipo Product
+        const productsData = querySnapshot.docs.map((doc) => {
+          const data = doc.data();
+          
+          // Fazendo o casting para garantir que temos todas as propriedades do tipo Product
+          const product: Product = {
+            id: doc.id, // Usando o `doc.id` para atribuir um ID único do documento
+            name: data.name || "",
+            price: data.price || 0,
+            description: data.description || "",
+            images: data.images || [],
+            brand: data.brand || "",
+            colors: data.colors || [],
+            diameters: data.diameters || [],
+            top: data.top || false,
+          };
+          
+          return product;
+        });
+  
+        setProducts(productsData);
+      } catch (error) {
+        console.error("Erro ao buscar os produtos: ", error);
+      }
+    };
+  
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -45,35 +78,6 @@ const ProductList: React.FC<ProductListProps> = ({ products }) => {
 
   return (
     <>
-      <div className="flex gap-2 pt-10 pl-10  m-auto max-w-[1200px] ">
-        <ul className="flex gap-2">
-          <li>
-            <Link
-              href="/"
-              replace
-              className={`transition-colors duration-300 ${
-                pathname === "/"
-                  ? "text-yellow-500"
-                  : "text-zinc-400 hover:text-yellow-500"
-              }`}
-            >
-              Início /
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/catalog"
-              className={`transition-colors duration-300 ${
-                pathname === "/catalog"
-                  ? "text-yellow-500"
-                  : "text-zinc-400 hover:text-yellow-500"
-              }`}
-            >
-              Catálogo
-            </Link>
-          </li>
-        </ul>
-      </div>
       <div className="max-w-[1200px] m-auto">
         <div className="flex flex-col text-center mt-12">
           <p className="text-3xl font-semibold">Catálogo de produtos</p>

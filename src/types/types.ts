@@ -3,11 +3,11 @@ import { StaticImageData } from "next/image";
 export type ImageType = string | StaticImageData;
 
 export interface Product {
-  id: number;
+  id: string;
   name: string;
   price: number;
   description: string;
-  images: ImageType[];
+  images: string[];
   brand: string;
   colors?: string[];
   diameters?: string[];
