@@ -21,7 +21,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="w-full bg-[#181818] shadow-lg relative">
+      <div className="w-full bg-zinc-300 shadow-lg relative">
         <div className="flex justify-between items-center m-auto p-4 max-w-[1200px]">
           <Link href="/" replace>
             <Image
@@ -38,8 +38,8 @@ export const Navbar = () => {
                 replace
                 className={`transition-colors duration-300 ${
                   pathname === "/"
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-500"
+                    ? "text-red-500"
+                    : "text-zinc-700 hover:text-yellow-500"
                 }`}
               >
                 Início
@@ -50,8 +50,8 @@ export const Navbar = () => {
                 href="/catalog"
                 className={`transition-colors duration-300 ${
                   pathname === "/catalog"
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-500"
+                    ? "text-red-500"
+                    : "text-zinc-700 hover:text-yellow-500"
                 }`}
               >
                 Catálogo
@@ -62,8 +62,8 @@ export const Navbar = () => {
                 href="/about"
                 className={`transition-colors duration-300 ${
                   pathname === "/about"
-                    ? "text-yellow-500"
-                    : "text-white hover:text-yellow-500"
+                    ? "text-red-500"
+                    : "text-zinc-700 hover:text-yellow-500"
                 }`}
               >
                 Sobre

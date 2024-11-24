@@ -17,10 +17,10 @@ export const Depositions = () => {
           Verifique nossas últimas avaliações de clientes e dê seu feedback.
         </span>
       </div>
-      <div className="mt-6 h-[670px] max-w-[1200px] rounded-md bg-[#282828] lg:m-auto lg:mt-6 lg:h-64">
+      <div className="mt-6 h-[670px] max-w-[1200px] rounded-md bg-zinc-200 lg:m-auto lg:mt-6 lg:h-64">
         <div className="flex flex-col justify-center gap-8 p-8 lg:flex-row">
-          <div className="border-b-2 lg:border-e-2 lg:border-b-0 border-zinc-600">
-            <p className="w-80 text-zinc-400 mr-4">
+          <div className="border-b-2 lg:border-e-2 lg:border-b-0 border-zinc-300">
+            <p className="w-80 text-zinc-700 mr-4">
               Rodas de primeira qualidade. O Olavo sempre disponível para ajudar
               ao ponto da roda ser ao meu gosto. Conto com ele para calçar
               muitos dos meus RWB e não só...
@@ -31,7 +31,7 @@ export const Depositions = () => {
                 src={profileImage1}
                 alt="imagem de perfil"
               />
-              <div className="flex flex-col text-zinc-400">
+              <div className="flex flex-col text-zinc-700">
                 <span className="font-semibold">
                 José Teixeira ⭐️⭐️⭐️⭐️⭐️
                 </span>
@@ -39,8 +39,8 @@ export const Depositions = () => {
               </div>
             </div>
           </div>
-          <div className="border-b-2 lg:border-e-2 lg:border-b-0 border-zinc-600">
-            <p className="w-80 text-zinc-400 mr-4">
+          <div className="border-b-2 lg:border-e-2 lg:border-b-0 border-zinc-300">
+            <p className="w-80 text-zinc-700 mr-4">
             Top 5 ✨ rodas de qualidade, tudo muito bem embalado e rápido envio. Recomendo vivamente 👍 
 Todas as dúvidas que tive, foram prontamente esclarecidas...
             </p>
@@ -50,14 +50,14 @@ Todas as dúvidas que tive, foram prontamente esclarecidas...
                 src={profileImage2}
                 alt="imagem de perfil"
               />
-              <div className="flex flex-col text-zinc-400">
+              <div className="flex flex-col text-zinc-700">
                 <span className="font-semibold">João Costa ⭐️⭐️⭐️⭐️⭐️</span>
                 <span className="font-semibold">Colecionador</span>
               </div>
             </div>
           </div>
           <div>
-            <p className="w-80 text-zinc-400 mr-4">
+            <p className="w-80 text-zinc-700 mr-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
               tempora itaque facere eveniet quasi!
             </p>
@@ -67,7 +67,7 @@ Todas as dúvidas que tive, foram prontamente esclarecidas...
                 src={profileImage}
                 alt="imagem de perfil"
               />
-              <div className="flex flex-col text-zinc-400">
+              <div className="flex flex-col text-zinc-700">
                 <span className="font-semibold">John Doe ⭐️⭐️⭐️⭐️⭐️</span>
                 <span className="font-semibold">Colecionador</span>
               </div>

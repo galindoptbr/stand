@@ -15,7 +15,7 @@ export const Footer = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-full bg-[#181818] mt-24 p-6 h-[600px] lg:h-72">
+      <div className="w-full bg-zinc-200 mt-24 p-6 h-[600px] lg:h-72">
         <div className="flex flex-col items-center justify-between max-w-[1200px] m-auto gap-6 lg:flex-row">
           <div className="flex flex-col gap-4 w-96 p-4 lg:p-0">
             <p className="font-semibold text-xl">Informações de contato</p>
@@ -31,7 +31,7 @@ export const Footer = () => {
               target="_blank"
               className="inline-block"
             >
-              <button className="flex items-center justify-center gap-2 bg-green-600 p-2 rounded-full w-full m-auto hover:bg-green-500 transition-colors duration-300">
+              <button className="flex items-center justify-center gap-2 bg-green-600 p-2 rounded-full w-full m-auto hover:bg-green-500 transition-colors duration-300 text-zinc-200">
                 <BsWhatsapp />
                 <span className="font-semibold">Enviar mensagem</span>
               </button>
@@ -47,8 +47,8 @@ export const Footer = () => {
                   replace
                   className={`transition-colors duration-300 flex items-center ${
                     pathname === "/"
-                      ? "text-yellow-500"
-                      : "text-white hover:text-yellow-500"
+                      ? "text-red-500"
+                      : "text-zinc-500 hover:text-yellow-500"
                   }`}
                 >
                   <MdKeyboardArrowRight />
@@ -60,8 +60,8 @@ export const Footer = () => {
                   href="/catalog"
                   className={`transition-colors duration-300 flex items-center ${
                     pathname === "/catalog"
-                      ? "text-yellow-500"
-                      : "text-white hover:text-yellow-500"
+                      ? "text-red-500"
+                      : "text-zinc-500 hover:text-yellow-500"
                   }`}
                 >
                   <MdKeyboardArrowRight />
@@ -73,8 +73,8 @@ export const Footer = () => {
                   href="/about"
                   className={`transition-colors duration-300 flex items-center ${
                     pathname === "/about"
-                      ? "text-yellow-500"
-                      : "text-white hover:text-yellow-500"
+                      ? "text-red-500"
+                      : "text-zinc-500 hover:text-yellow-500"
                   }`}
                 >
                   <MdKeyboardArrowRight />

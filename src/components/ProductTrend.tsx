@@ -29,15 +29,15 @@ const ProductTrend: React.FC<ProductListProps> = ({ products }) => {
   return (
     <div className="max-w-[1200px] m-auto">
       <div className="mt-8 p-4 lg:p-0 lg:mt-16">
-        <h1 className=" text-3xl font-bold">Mais vendidos🔥</h1>
-        <p className="text-zinc-400">
-          Veja nossa lista de modelos mais vendidos.{" "}
+        <h1 className=" text-3xl font-bold">Em destaque🔥</h1>
+        <p className="text-zinc-500">
+          Veja nossa lista de modelos que acabaram de chegar.{" "}
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8 p-2 lg:p-0 mt-4">
         {currentProducts.map((product) => (
           <Link key={product.id} href={`/product/${product.id}`} passHref>
-            <div className="bg-[#282828] rounded-lg p-4 cursor-pointer">
+            <div className="bg-zinc-300 rounded-lg p-4 cursor-pointer">
               <Image
                 src={product.images[0]}
                 alt={product.name}
@@ -47,12 +47,12 @@ const ProductTrend: React.FC<ProductListProps> = ({ products }) => {
                 priority
               />
               <div className="flex flex-col items-center">
-                <p className="text-zinc-400 pt-2">{product.brand}</p>
+                <p className="text-zinc-500 pt-2">{product.brand}</p>
                 <h2 className="mt-2 text-2xl font-bold">{product.name}</h2>
                 <p className="mt-2 text-lg font-semibold">
                   € {product.price.toFixed(2)}
                 </p>
-                <button className="bg-black hover:bg-zinc-700 p-2 rounded-full font-bold w-48 mt-4">
+                <button className="bg-zinc-600 hover:bg-zinc-700 p-2 rounded-full font-bold w-48 mt-4">
                   <span className="text-white">VER PRODUTO</span>
                 </button>
               </div>
