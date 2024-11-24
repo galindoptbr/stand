@@ -20,24 +20,21 @@ const ProductList: React.FC = () => {
     const fetchProducts = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "products"));
-        
-        // Garantindo que cada documento seja formatado para corresponder ao tipo Product
+  
         const productsData = querySnapshot.docs.map((doc) => {
           const data = doc.data();
-          
+  
           // Fazendo o casting para garantir que temos todas as propriedades do tipo Product
           const product: Product = {
             id: doc.id, // Usando o `doc.id` para atribuir um ID único do documento
-            name: data.name || "",
-            price: data.price || 0,
-            description: data.description || "",
-            images: data.images || [],
-            brand: data.brand || "",
-            colors: data.colors || [],
-            diameters: data.diameters || [],
+            name: data.name || "Produto sem nome",
+            price: data.price ? Number(data.price) : 0, // Certifique-se que `price` seja numérico
+            description: data.description || "Sem descrição",
+            images: data.images && data.images.length ? data.images : ["/placeholder.jpg"], // Usar uma imagem padrão se estiver vazio
+            brand: data.brand || "Marca desconhecida",
             top: data.top || false,
           };
-          
+  
           return product;
         });
   
@@ -49,6 +46,7 @@ const ProductList: React.FC = () => {
   
     fetchProducts();
   }, []);
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -102,7 +100,7 @@ const ProductList: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 p-2 lg:p-0">
           {currentProducts.map((product) => (
             <Link key={product.id} href={`/product/${product.id}`} passHref>
-              <div className="bg-[#282828] rounded-lg p-4 cursor-pointer">
+              <div className="bg-zinc-300 rounded-lg p-4 cursor-pointer">
                 <Image
                   src={product.images[0]}
                   alt={product.name}
@@ -112,12 +110,12 @@ const ProductList: React.FC = () => {
                   priority
                 />
                 <div className="flex flex-col items-center">
-                  <p className="text-zinc-400 pt-2">{product.brand}</p>
+                  <p className="text-zinc-500 pt-2">{product.brand}</p>
                   <h2 className="mt-2 text-2xl font-bold">{product.name}</h2>
-                  <p className="mt-2 text-lg font-semibold">
+                  <p className="mt-2 text-lg font-semibold text-green-500">
                     € {product.price.toFixed(2)}
                   </p>
-                  <button className="bg-black hover:bg-zinc-700 p-2 rounded-full font-bold w-48 mt-4">
+                  <button className="bg-red-500 hover:bg-zinc-700 p-2 rounded-md font-bold w-48 mt-4">
                     <span className="text-white">VER PRODUTO</span>
                   </button>
                 </div>

@@ -6,7 +6,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyA8FpdkZfpxSNAOmt7HbDwB8AguBNnA61U",
   authDomain: "standberg-d9413.firebaseapp.com",
   projectId: "standberg-d9413",
-  storageBucket: "standberg-d9413.appspot.com",  // Corrigido aqui
+  storageBucket: "standberg-d9413.firebasestorage.app",
   messagingSenderId: "891745724837",
   appId: "1:891745724837:web:780d3b0b5be3bf5067a04c",
   measurementId: "G-1VKMZXHT3V",

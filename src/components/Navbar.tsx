@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import logoOlavo from "@/assets/images/logo-olavo.png";
+import logo from "@/assets/images/berg-lins.png";
 
 export const Navbar = () => {
   const pathname = usePathname();
@@ -25,8 +25,8 @@ export const Navbar = () => {
         <div className="flex justify-between items-center m-auto p-4 max-w-[1200px]">
           <Link href="/" replace>
             <Image
-              className="w-24 rounded-lg"
-              src={logoOlavo}
+              className="w-48 rounded-lg"
+              src={logo}
               alt="logo olavo"
             />
           </Link>
